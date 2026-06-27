@@ -182,7 +182,7 @@ html { scroll-behavior: smooth; }
     border-radius: 20px;
     padding: 2rem;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: all 0.1s ease;
     height: 100%;
     box-shadow: 0 5px 20px var(--shadow-color);
     border: 1px solid var(--border-color);
@@ -216,25 +216,39 @@ html { scroll-behavior: smooth; }
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    transition: background 0.4s ease;
+    transition: background 0.1s ease;
 }
 
 .service-icon i {
     font-size: 2.5rem;
     color: var(--bg-color);
-    transition: color 0.4s ease;
+    transition: color 0.1s ease;
 }
 
+/* ===== PORTFÓLIO ===== */
 .portfolio-placeholder {
     background: var(--primary);
-    height: 200px;
+    height: auto;
+    min-height: 250px;
+    max-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 15px;
     margin-bottom: 1rem;
-    transition: background 0.4s ease;
+    transition: background 0.1s ease;
+    overflow: hidden;
+     /* BORDA ROXA */
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+}
+
+.portfolio-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
 }
 
 .portfolio-placeholder i {
@@ -254,7 +268,7 @@ html { scroll-behavior: smooth; }
 .faq-section {
     background: var(--bg-color);
     padding: 80px 0;
-    transition: background 0.4s ease;
+    transition: background 0.1s ease;
 }
 
 .section-title {
@@ -283,7 +297,7 @@ html { scroll-behavior: smooth; }
     border: 2px solid var(--border-color);
     border-radius: 10px;
     padding: 12px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     color: var(--text-color);
 }
 
@@ -533,4 +547,64 @@ hr.bg-light {
 
 .btn-outline-custom i {
     font-size: 1.1rem;
+}
+/* ===== CARROSSEL ===== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary);
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 60%;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--primary);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: var(--primary);
+    opacity: 0.5;
+}
+
+.portfolio-card {
+    padding: 2rem;
+}
+/* ===== CARROSSEL ===== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary);
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 60%;
+}
+
+.carousel-indicators {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--primary);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-indicators .active {
+    background-color: var(--primary);
+    opacity: 1;
+}
+
+.portfolio-card {
+    padding: 2rem;
+    padding-bottom: 3rem;
+}
+
+.carousel-item {
+    padding-bottom: 20px;
 }
