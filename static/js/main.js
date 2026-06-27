@@ -6,21 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const htmlRoot = document.getElementById('htmlRoot');
     
     // Verifica preferência salva
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem('theme') || 'light';
     
     function setTheme(theme) {
-        if (theme === 'light') {
-            htmlRoot.setAttribute('data-theme', 'light');
-            themeDark.classList.remove('active');
-            themeLight.classList.add('active');
-            localStorage.setItem('theme', 'light');
-        } else {
-            htmlRoot.removeAttribute('data-theme');
-            themeLight.classList.remove('active');
-            themeDark.classList.add('active');
-            localStorage.setItem('theme', 'dark');
-        }
+    if (theme === 'light') {
+        htmlRoot.setAttribute('data-theme', 'light');
+        themeDark.classList.remove('active');
+        themeLight.classList.add('active');
+        localStorage.setItem('theme', 'light');
+    } else {
+        htmlRoot.removeAttribute('data-theme');
+        themeLight.classList.remove('active');
+        themeDark.classList.add('active');
+        localStorage.setItem('theme', 'dark');
     }
+}
     
     // Aplica o tema salvo ao carregar
     setTheme(savedTheme);
